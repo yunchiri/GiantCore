@@ -18,6 +18,7 @@
 #include "csvmodelwriter.h"
 #include "editaddressdialog.h"
 #include "guiutil.h"
+#include "platformstyle.h"
 
 #include <QIcon>
 #include <QMenu>
@@ -78,13 +79,13 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget* parent) : QDialog
     }
 
     // Context menu actions
-    QAction* copyAddressAction = new QAction(tr("&Copy Address"), this);
-    QAction* copyLabelAction = new QAction(tr("Copy &Label"), this);
-    QAction* editAction = new QAction(tr("&Edit"), this);
+    QAction *copyAddressAction = new QAction(tr("&Copy Address"), this);
+    QAction *copyLabelAction = new QAction(tr("Copy &Label"), this);
+    QAction *editAction = new QAction(tr("&Edit"), this);
     deleteAction = new QAction(ui->deleteAddress->text(), this);
 
     // Build context menu
-    contextMenu = new QMenu();
+    contextMenu = new QMenu(this);
     contextMenu->addAction(copyAddressAction);
     contextMenu->addAction(copyLabelAction);
     contextMenu->addAction(editAction);
@@ -108,7 +109,7 @@ AddressBookPage::~AddressBookPage()
     delete ui;
 }
 
-void AddressBookPage::setModel(AddressTableModel* model)
+void AddressBookPage::setModel(AddressTableModel *model)
 {
     this->model = model;
     if (!model)
@@ -164,20 +165,19 @@ void AddressBookPage::onCopyLabelAction()
 
 void AddressBookPage::onEditAction()
 {
-    if (!model)
+    if(!model)
         return;
 
-    if (!ui->tableView->selectionModel())
+    if(!ui->tableView->selectionModel())
         return;
     QModelIndexList indexes = ui->tableView->selectionModel()->selectedRows();
-    if (indexes.isEmpty())
+    if(indexes.isEmpty())
         return;
 
     EditAddressDialog dlg(
         tab == SendingTab ?
-            EditAddressDialog::EditSendingAddress :
-            EditAddressDialog::EditReceivingAddress,
-        this);
+        EditAddressDialog::EditSendingAddress :
+        EditAddressDialog::EditReceivingAddress, this);
     dlg.setModel(model);
     QModelIndex origIndex = proxyModel->mapToSource(indexes.at(0));
     dlg.loadRow(origIndex.row());
@@ -186,14 +186,13 @@ void AddressBookPage::onEditAction()
 
 void AddressBookPage::on_newAddress_clicked()
 {
-    if (!model)
+    if(!model)
         return;
 
     EditAddressDialog dlg(
         tab == SendingTab ?
-            EditAddressDialog::NewSendingAddress :
-            EditAddressDialog::NewReceivingAddress,
-        this);
+        EditAddressDialog::NewSendingAddress :
+        EditAddressDialog::NewReceivingAddress, this);
     dlg.setModel(model);
     if (dlg.exec()) {
         newAddressToSelect = dlg.getAddress();
@@ -202,12 +201,12 @@ void AddressBookPage::on_newAddress_clicked()
 
 void AddressBookPage::on_deleteAddress_clicked()
 {
-    QTableView* table = ui->tableView;
-    if (!table->selectionModel())
+    QTableView *table = ui->tableView;
+    if(!table->selectionModel())
         return;
 
     QModelIndexList indexes = table->selectionModel()->selectedRows();
-    if (!indexes.isEmpty()) {
+    if(!indexes.isEmpty()) {
         table->model()->removeRow(indexes.at(0).row());
     }
 }
@@ -215,11 +214,11 @@ void AddressBookPage::on_deleteAddress_clicked()
 void AddressBookPage::selectionChanged()
 {
     // Set button states based on selected tab and selection
-    QTableView* table = ui->tableView;
-    if (!table->selectionModel())
+    QTableView *table = ui->tableView;
+    if(!table->selectionModel())
         return;
 
-    if (table->selectionModel()->hasSelection()) {
+    if(table->selectionModel()->hasSelection()) {
         switch (tab) {
         case SendingTab:
             // In sending tab, allow deletion of selection
@@ -243,19 +242,19 @@ void AddressBookPage::selectionChanged()
 
 void AddressBookPage::done(int retval)
 {
-    QTableView* table = ui->tableView;
-    if (!table->selectionModel() || !table->model())
+    QTableView *table = ui->tableView;
+    if(!table->selectionModel() || !table->model())
         return;
 
     // Figure out which address was selected, and return it
     QModelIndexList indexes = table->selectionModel()->selectedRows(AddressTableModel::Address);
 
-    foreach (QModelIndex index, indexes) {
+    Q_FOREACH (const QModelIndex& index, indexes) {
         QVariant address = table->model()->data(index);
         returnValue = address.toString();
     }
 
-    if (returnValue.isEmpty()) {
+    if(returnValue.isEmpty()) {
         // If no address entry selected, return rejected
         retval = Rejected;
     }
@@ -286,7 +285,7 @@ void AddressBookPage::on_exportButton_clicked()
     }
 }
 
-void AddressBookPage::contextualMenu(const QPoint& point)
+void AddressBookPage::contextualMenu(const QPoint &point)
 {
     QModelIndex index = ui->tableView->indexAt(point);
     if (index.isValid()) {
@@ -294,10 +293,10 @@ void AddressBookPage::contextualMenu(const QPoint& point)
     }
 }
 
-void AddressBookPage::selectNewAddress(const QModelIndex& parent, int begin, int /*end*/)
+void AddressBookPage::selectNewAddress(const QModelIndex &parent, int begin, int /*end*/)
 {
     QModelIndex idx = proxyModel->mapFromSource(model->index(begin, AddressTableModel::Address, parent));
-    if (idx.isValid() && (idx.data(Qt::EditRole).toString() == newAddressToSelect)) {
+    if(idx.isValid() && (idx.data(Qt::EditRole).toString() == newAddressToSelect)) {
         // Select row of newly created address, once
         ui->tableView->setFocus();
         ui->tableView->selectRow(idx.row());

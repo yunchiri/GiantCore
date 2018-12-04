@@ -30,6 +30,8 @@ class SendCoinsRecipient;
 class UnitDisplayStatusBarControl;
 class WalletFrame;
 class WalletModel;
+class HelpMessageDialog;
+class ModalOverlay;
 class MasternodeList;
 
 class CWallet;
@@ -50,21 +52,22 @@ class BitcoinGUI : public QMainWindow
 
 public:
     static const QString DEFAULT_WALLET;
+    static const std::string DEFAULT_UIPLATFORM;
 
-    explicit BitcoinGUI(const NetworkStyle* networkStyle, QWidget* parent = 0);
+    explicit BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle* networkStyle, QWidget* parent = 0);
     ~BitcoinGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
     */
-    void setClientModel(ClientModel* clientModel);
+    void setClientModel(ClientModel *clientModel);
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
         The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
-    bool addWallet(const QString& name, WalletModel* walletModel);
+    bool addWallet(const QString& name, WalletModel *walletModel);
     bool setCurrentWallet(const QString& name);
     void removeAllWallets();
 #endif // ENABLE_WALLET
@@ -72,15 +75,16 @@ public:
     bool fMultiSend = false;
 
 protected:
-    void changeEvent(QEvent* e);
-    void closeEvent(QCloseEvent* event);
-    void dragEnterEvent(QDragEnterEvent* event);
-    void dropEvent(QDropEvent* event);
-    bool eventFilter(QObject* object, QEvent* event);
+    void changeEvent(QEvent *e);
+    void closeEvent(QCloseEvent *event);
+    void showEvent(QShowEvent *event);
+    void dragEnterEvent(QDragEnterEvent *event);
+    void dropEvent(QDropEvent *event);
+    bool eventFilter(QObject *object, QEvent *event);
 
 private:
-    ClientModel* clientModel;
-    WalletFrame* walletFrame;
+    ClientModel *clientModel;
+    WalletFrame *walletFrame;
 
     UnitDisplayStatusBarControl* unitDisplayControl;
     QLabel* labelStakingIcon;
@@ -136,14 +140,16 @@ private:
     int prevBlocks;
     int spinnerFrame;
 
+    const PlatformStyle *platformStyle;
+
     /** Create the main UI actions. */
-    void createActions(const NetworkStyle* networkStyle);
+    void createActions();
     /** Create the menu bar and sub-menus. */
     void createMenuBar();
     /** Create the toolbars */
     void createToolBars();
     /** Create system tray icon and notification */
-    void createTrayIcon(const NetworkStyle* networkStyle);
+    void createTrayIcon(const NetworkStyle *networkStyle);
     /** Create system tray menu (or setup the dock menu) */
     void createTrayIconMenu();
 
@@ -157,7 +163,7 @@ private:
 
 signals:
     /** Signal raised when a URI was entered or dragged to the GUI */
-    void receivedURI(const QString& uri);
+    void receivedURI(const QString &uri);
     /** Restart handling */
     void requestedRestart(QStringList args);
 
@@ -242,7 +248,15 @@ private slots:
     void detectShutdown();
 
     /** Show progress dialog e.g. for verifychain */
-    void showProgress(const QString& title, int nProgress);
+    void showProgress(const QString &title, int nProgress);
+    
+    /** When hideTrayIcon setting is changed in OptionsModel hide or show the icon accordingly. */
+    void setTrayIconVisible(bool);
+
+    /** Toggle networking */
+    void toggleNetworkActive();
+
+    void showModalOverlay();
 };
 
 class UnitDisplayStatusBarControl : public QLabel
@@ -250,16 +264,16 @@ class UnitDisplayStatusBarControl : public QLabel
     Q_OBJECT
 
 public:
-    explicit UnitDisplayStatusBarControl();
+    explicit UnitDisplayStatusBarControl(const PlatformStyle *platformStyle);
     /** Lets the control know about the Options Model (and its signals) */
-    void setOptionsModel(OptionsModel* optionsModel);
+    void setOptionsModel(OptionsModel *optionsModel);
 
 protected:
     /** So that it responds to left-button clicks */
-    void mousePressEvent(QMouseEvent* event);
+    void mousePressEvent(QMouseEvent *event);
 
 private:
-    OptionsModel* optionsModel;
+    OptionsModel *optionsModel;
     QMenu* menu;
 
     /** Shows context menu with Display Unit options by the mouse coordinates */
