@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru" version="2.0">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru" version="2.1">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -176,20 +176,20 @@
         <translation>Подтвердите шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DNET&lt;/b&gt;!</source>
-        <translation>Внимание: если Вы зашифруете кошелёк и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ DNET&lt;/b&gt;!</translation>
+        <source>GIANT will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your giants from being stolen by malware infecting your computer.</source>
+        <translation>Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши даши от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Вы уверены, что хотите зашифровать ваш кошелёк?</translation>
     </message>
     <message>
-        <source>Wallet encrypted</source>
-        <translation>Кошелёк зашифрован</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DNET&lt;/b&gt;!</source>
+        <translation>Внимание: если Вы зашифруете кошелёк и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ DNET&lt;/b&gt;!</translation>
     </message>
     <message>
-        <source>GIANT will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your giants from being stolen by malware infecting your computer.</source>
-        <translation>Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши даши от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
+	<source>Wallet encrypted</source>
+        <translation>Кошелёк зашифрован</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -229,13 +229,172 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>Bip38ToolDialog</name>
     <message>
-        <source>GIANT Core</source>
-        <translation>GIANT Core</translation>
+        <source>BIP 38 Tool</source>
+        <translation>BIP 38 Инструменты</translation>
     </message>
     <message>
-        <source>Wallet</source>
+        <source>&amp;BIP 38 Encrypt</source>
+        <translation>Зашифровать</translation>
+    </message>
+    <message>
+        <source>Enter a GIANT Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Введите GIANT адрес чтобы использовать шифрование BIP38. Введите пороль.</translation>
+    </message>
+    <message>
+        <source>Address:</source>
+        <translation>Адрес:</translation>
+    </message>
+    <message>
+        <source>The GIANT address to sign the message with</source>
+        <translation>Используйте адрес GIANT для подписи сообщения</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>Используйте ранее введенный адрес</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Вставьте адрес</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>Passphrase: </source>
+        <translation>Пароль</translation>
+    </message>
+    <message>
+        <source>Encrypted Key:</source>
+        <translation>Зашифрованный ключ:</translation>
+    </message>
+    <message>
+        <source>Copy the current signature to the system clipboard</source>
+        <translation>Скопируйте текущую подпись</translation>
+    </message>
+    <message>
+        <source>Sign the message to prove you own this GIANT address</source>
+        <translation>Подпишите сообщение, чтобы доказать, что Вы владеете этим GIANT адресом</translation>
+    </message>
+    <message>
+        <source>Encrypt &amp;Key</source>
+        <translation>Зашифровать &amp; Ключ</translation>
+    </message>
+    <message>
+        <source>Reset all sign message fields</source>
+        <translation>Сбросить все подписи</translation>
+    </message>
+    <message>
+        <source>Clear &amp;All</source>
+        <translation>Очистить &amp;Все</translation>
+    </message>
+    <message>
+        <source>&amp;BIP 38 Decrypt</source>
+        <translation>Расшифровать</translation>
+    </message>
+    <message>
+        <source>Enter the BIP 38 encrypted private key. Enter the passphrase in the middle box. Click Decrypt Key to compute the private key. After the key is decrypted, clicking &apos;Import Address&apos; will add this private key to the wallet.</source>
+        <translation>Введите зашифрованный приватный ключ. Введите пароль. Нажмите Расшифровать Ключ, чтобы вычислить приватный ключ. После того, как ключ расшифрован, нажмите &apos;Import Address&apos; добавит этот приватный ключ к кошельку.</translation>
+    </message>
+    <message>
+        <source>The GIANT address the message was signed with</source>
+        <translation>GIANT адрес подписал сообщение</translation>
+    </message>
+    <message>
+        <source>Verify the message to ensure it was signed with the specified GIANT address</source>
+        <translation>Проверьте сообщение, чтобы гарантировать, что оно было подписано с указанным GIANT адресом</translation>
+    </message>
+    <message>
+        <source>Decrypt &amp;Key</source>
+        <translation>Расшифровать &amp; Ключ</translation>
+    </message>
+    <message>
+        <source>Reset all verify message fields</source>
+        <translation>Сбросить все поля</translation>
+    </message>
+    <message>
+        <source>Decrypted Key:</source>
+        <translation>Расшифрованный ключ</translation>
+    </message>
+    <message>
+        <source>Import Address</source>
+        <translation>Импортировать адрес</translation>
+    </message>
+    <message>
+        <source>Click &quot;Decrypt Key&quot; to compute key</source>
+        <translation type="unfinished">Нажмите &quot;Расшифруйте ключ&quot; чтобы выччислить ключ</translation>
+    </message>
+    <message>
+        <source>The entered passphrase is invalid. </source>
+        <translation>Введенный пароль недействителен.</translation>
+    </message>
+    <message>
+        <source>Allowed: 0-9,a-z,A-Z,</source>
+        <translation>Используйте: 0-9,a-z,A-Z,</translation>
+    </message>
+    <message>
+        <source>The entered address is invalid.</source>
+        <translation>Введенный адрес недействителен.</translation>
+    </message>
+    <message>
+        <source>Please check the address and try again.</source>
+        <translation>Пожалуйста, проверьте адрес и попробуйте еще раз.</translation>
+    </message>
+    <message>
+        <source>The entered address does not refer to a key.</source>
+        <translation>Введенный адрес не относится к ключу.</translation>
+    </message>
+    <message>
+        <source>Wallet unlock was cancelled.</source>
+        <translation>Блокировка кошелька была отменена, был отменен.</translation>
+    </message>
+    <message>
+        <source>Private key for the entered address is not available.</source>
+        <translation>Приватный ключ для введенного адреса не доступен.</translation>
+    </message>
+    <message>
+        <source>Failed to decrypt.</source>
+        <translation>Ошибка расшифровки.</translation>
+    </message>
+    <message>
+        <source>Please check the key and passphrase and try again.</source>
+        <translation>Пожалуйста, проверьте ключ и пароль и попробуйте еще раз.</translation>
+    </message>
+    <message>
+        <source>Data Not Valid.</source>
+        <translation>Данные, не действительные.</translation>
+    </message>
+    <message>
+        <source>Please try again.</source>
+        <translation>Пожалуйста, попробуйте еще раз.</translation>
+    </message>
+    <message>
+        <source>Please wait while key is imported</source>
+        <translation>Пожалуйста, ждите, пока ключ импортирован</translation>
+    </message>
+    <message>
+        <source>Key Already Held By Wallet</source>
+        <translation>Ключ уже пренадлежит кошельку.</translation>
+    </message>
+    <message>
+        <source>Error Adding Key To Wallet</source>
+        <translation>Ошибка, добавления ключа к кошельку.</translation>
+    </message>
+    <message>
+        <source>Successfully Added Private Key To Wallet</source>
+        <translation>Приватный ключ успешно добавлен в кошелек.</translation>
+    </message>
+</context>
+<context>
+    <name>BitcoinGUI</name>
+    <message>
+         <source>Wallet</source>
         <translation>Кошелёк</translation>
     </message>
     <message>
@@ -254,17 +413,9 @@
         <source>&amp;Send</source>
         <translation>&amp;Отправить</translation>
     </message>
-    <message>
-        <source>Send coins to a GIANT address</source>
-        <translation>Отправить монеты на указанный адрес GIANT</translation>
-    </message>
-    <message>
+    <message>      
         <source>&amp;Receive</source>
         <translation>&amp;Получить</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and giant: URIs)</source>
-        <translation>Запросить платежи (создать QR-коды и giant: URI)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -283,14 +434,6 @@
         <translation>Закрыть приложение</translation>
     </message>
     <message>
-        <source>&amp;About GIANT Core</source>
-        <translation>О &amp;GIANT Core</translation>
-    </message>
-    <message>
-        <source>Show information about GIANT Core</source>
-        <translation>Показать информацию о GIANT Core</translation>
-    </message>
-    <message>
         <source>About &amp;Qt</source>
         <translation>О &amp;Qt</translation>
     </message>
@@ -303,10 +446,6 @@
         <translation>&amp;Настройки...</translation>
     </message>
     <message>
-        <source>Modify configuration options for GIANT</source>
-        <translation>Изменить параметры конфигурации GIANT</translation>
-    </message>
-    <message>
         <source>&amp;Show / Hide</source>
         <translation>&amp;Показать / Скрыть</translation>
     </message>
@@ -316,7 +455,7 @@
     </message>
     <message>
         <source>&amp;Encrypt Wallet...</source>
-        <translation>За&amp;шифровать кошелёк...</translation>
+        <translation>&amp;Зашифровать кошелёк...</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
@@ -348,23 +487,15 @@
     </message>
     <message>
         <source>&amp;Lock Wallet</source>
-        <translation>За&amp;блокировать кошелёк</translation>
+        <translation>&amp;Заблокировать кошелёк</translation>
     </message>
     <message>
         <source>Sign &amp;message...</source>
-        <translation>П&amp;одписать сообщение...</translation>
-    </message>
-    <message>
-        <source>Sign messages with your GIANT addresses to prove you own them</source>
-        <translation>Подписать сообщения вашими адресами GIANT, чтобы доказать, что вы ими владеете</translation>
+        <translation>&amp;Подписать сообщение...</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
-        <translation>П&amp;роверить сообщение...</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified GIANT addresses</source>
-        <translation>Проверить сообщения, чтобы удостовериться, что они были подписаны определёнными адресами GIANT</translation>
+        <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
         <source>&amp;Information</source>
@@ -443,28 +574,19 @@
         <translation>Открыть &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a giant: URI or payment request</source>
-        <translation>Открыть giant: URI или запрос платежа</translation>
-    </message>
-    <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Параметры командной строки</translation>
     </message>
-    <message>
-        <source>GIANT Core client</source>
-        <translation>Клиент GIANT Core</translation>
-    </message>
     <message numerus="yes">
         <source>Processed %n blocks of transaction history.</source>
-        <translation><numerusform>Обработано %n блок из истории транзакций.</numerusform><numerusform>Обработано %n блока из истории транзакций.</numerusform><numerusform>Обработано %n блоков из истории транзакций.</numerusform><numerusform>Обработано %n блоков из истории транзакций.</numerusform></translation>
+        <translation>
+	    <numerusform>Обработано %n блок из истории транзакций.</numerusform>
+            <numerusform>Обработано %n блока из истории транзакций.</numerusform>
+	</translation>
     </message>
     <message>
         <source>Synchronizing additional data: %p%</source>
         <translation>Синхронизация дополнительных данных: %p%</translation>
-    </message>
-    <message>
-        <source>Show the GIANT Core help message to get a list with possible GIANT command-line options</source>
-        <translation>Показать помощь о GIANT Core со списком возможных параметров командной строки</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -484,11 +606,102 @@
     </message>
     <message>
         <source>Tabs toolbar</source>
-        <translation>Панель вкладок</translation>
+        <translation>Tabs toolbar</translation>
+    </message>
+    <message>
+        <source>GIANT Core</source>
+        <translation>GIANT Core</translation>
+    </message>
+    <message>
+        <source>Send coins to a GIANT address</source>
+        <translation>Отправить монеты на GIANT адрес</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and giant: URIs)</source>
+        <translation>Параметры оплаты (генерация QR кода для giant:URIs)</translation>
+    </message>
+    <message>
+        <source>&amp;Masternodes</source>
+        <translation>Мастерноды</translation>
+    </message>
+    <message>
+        <source>Browse masternodes</source>
+        <translation>Просмотр мастернод</translation>
+    </message>
+    <message>
+        <source>&amp;About GIANT Core</source>
+        <translation>&amp;О GIANT Core</translation>
+    </message>
+    <message>
+        <source>Show information about GIANT Core</source>
+        <translation>Показать информацию о GIANT Core</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for GIANT</source>
+        <translation>Изменение параметров конфигурации для GIANT</translation>
+    </message>
+    <message>
+        <source>Sign messages with your GIANT addresses to prove you own them</source>
+        <translation>Подисать сообщения с GIANT адрес, как доказательство владения</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified GIANT addresses</source>
+        <translation>Проверьте сообщения, чтобы гарантировать, что они были подписаны с указанным GIANT адрес</translation>
+    </message>
+    <message>
+        <source>&amp;BIP38 tool</source>
+        <translation>BIP38 Инструменты</translation>
+    </message>
+    <message>
+        <source>Encrypt and decrypt private keys using a passphrase</source>
+        <translation>Зашифруйте и расшифруйте частные ключи, используя пароль</translation>
+    </message>
+    <message>
+        <source>&amp;MultiSend</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>MultiSend Settings</source>
+        <translation>MultiSend настройки</translation>
+    </message>
+    <message>
+        <source>Open a GIANT: URI or payment request</source>
+        <translation>Открыть GIANT: URI платежного запроса</translation>
+    </message>
+    <message>
+        <source>&amp;Trading window</source>
+        <translation>&amp;Торговое окно</translation>
+    </message>
+    <message>
+        <source>Bittrex trading window</source>
+        <translation>Bittrex торговое окно</translation>
+    </message>
+    <message>
+        <source>&amp;Blockchain explorer</source>
+        <translation>&amp;Blockchain explorer</translation>
+    </message>
+    <message>
+        <source>Block explorer window</source>
+        <translation>Block explorer window</translation>
+    </message>
+    <message>
+        <source>Show the GIANT Core help message to get a list with possible GIANT command-line options</source>
+        <translation>Показать GIANT Core help с возможными командами для командной строки</translation>
+    </message>
+    <message>
+        <source>&amp;Trade</source>
+        <translation>&amp;Trade</translation>
+    </message>
+    <message>
+        <source>GIANT Core client</source>
+        <translation>GIANT Core клиент</translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to GIANT network</source>
-        <translation><numerusform>%n активное соединение с сетью GIANT</numerusform><numerusform>%n активных соединения с сетью GIANT</numerusform><numerusform>%n активных соединений с сетью GIANT</numerusform><numerusform>%n активных соединений с сетью GIANT</numerusform></translation>
+        <translation>
+	    <numerusform>%n активное соединение с сетью GIANT</numerusform>
+	    <numerusform>%n активных соединения с сетью GIANT</numerusform>
+	</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -512,15 +725,27 @@
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
-        <translation><numerusform>%n час</numerusform><numerusform>%n часа</numerusform><numerusform>%n часов</numerusform><numerusform>%n часов</numerusform></translation>
+        <translation>
+	    <numerusform>%n час</numerusform>
+	    <numerusform>%n часа</numerusform>
+	    <numerusform>%n часов</numerusform>
+	</translation>
     </message>
     <message numerus="yes">
         <source>%n day(s)</source>
-        <translation><numerusform>%n день</numerusform><numerusform>%n дня</numerusform><numerusform>%n дней</numerusform><numerusform>%n дней</numerusform></translation>
+        <translation>
+	    <numerusform>%n день</numerusform>
+	    <numerusform>%n дня</numerusform>
+	    <numerusform>%n дней</numerusform>
+	</translation>
     </message>
     <message numerus="yes">
         <source>%n week(s)</source>
-        <translation><numerusform>%n неделя</numerusform><numerusform>%n недели</numerusform><numerusform>%n недель</numerusform><numerusform>%n недель</numerusform></translation>
+        <translation>
+	    <numerusform>%n неделя</numerusform>
+	    <numerusform>%n недели</numerusform>
+	    <numerusform>%n недель</numerusform>
+	</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -528,7 +753,11 @@
     </message>
     <message numerus="yes">
         <source>%n year(s)</source>
-        <translation><numerusform>%n год</numerusform><numerusform>%n года</numerusform><numerusform>%n лет</numerusform><numerusform>%n лет</numerusform></translation>
+        <translation>
+	    <numerusform>%n год</numerusform>
+	    <numerusform>%n года</numerusform>
+	    <numerusform>%n лет</numerusform>
+	</translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -567,6 +796,10 @@
         <translation>Входящая транзакция</translation>
     </message>
     <message>
+        <source>Sent MultiSend transaction</source>
+        <translation>Отправка MultiSend транзакции</translation>
+    </message>
+    <message>
         <source>Date: %1
 Amount: %2
 Type: %3
@@ -579,6 +812,25 @@ Address: %4
 </translation>
     </message>
     <message>
+        <source>Staking is active
+ MultiSend: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active</source>
+        <translation>Активен</translation>
+    </message>
+    <message>
+        <source>Not Active</source>
+        <translation>Не активен</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Staking is not active
+ MultiSend: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Кошелёк &lt;b&gt;зашифрован&lt;/b&gt; и в настоящее время &lt;b&gt;разблокирован&lt;/b&gt;</translation>
     </message>
@@ -588,7 +840,30 @@ Address: %4
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Кошелёк &lt;b&gt;зашифрован&lt;/b&gt; и в настоящее время &lt;b&gt;заблокирован&lt;/b&gt;</translation>
+        <translation>Кошелёк &lt;b&gt;зашифрован&lt;/b&gt; и в данный момент &lt;b&gt;заблокирован&lt;/b&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>BlockExplorer</name>
+    <message>
+        <source>Blockchain Explorer</source>
+        <translation>Blockchain Explorer</translation>
+    </message>
+    <message>
+        <source>Address / Block / Transaction</source>
+        <translation>Адрес / Блок / Транзакция</translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation>Поиск</translation>
+    </message>
+    <message>
+        <source>TextLabel</source>
+        <translation>TextLabel</translation>
+    </message>
+    <message>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (giant.conf).</source>
+        <translation>Не все транзакии показаны. Чтобы рассмотреть все транзакции, Вы должны установить txindex=1 в конфигурационном файле (giant.conf).</translation>
     </message>
 </context>
 <context>
@@ -645,6 +920,10 @@ Address: %4
         <translation>Выбрать все/ничего</translation>
     </message>
     <message>
+        <source>toggle lock state</source>
+        <translation>toggle lock state</translation>
+    </message>
+    <message>
         <source>Tree mode</source>
         <translation>Режим дерева</translation>
     </message>
@@ -669,8 +948,8 @@ Address: %4
         <translation>Получено на адрес</translation>
     </message>
     <message>
-        <source>OBF Rounds</source>
-        <translation>Раунды OBF</translation>
+        <source>MIX Rounds</source>
+        <translation>Раунды Смешивания</translation>
     </message>
     <message>
         <source>Date</source>
@@ -739,6 +1018,10 @@ Address: %4
     <message>
         <source>Copy change</source>
         <translation>Копировать сдачу</translation>
+    </message>
+    <message>
+	<source>Please switch to &quot;List mode&quot; to use this function.</source>
+        <translation>Пожалуйста переключитесь на &quot;List mode&quot; чтобы использовать функцию</translation>
     </message>
     <message>
         <source>Non-anonymized input selected. &lt;b&gt;Obfuscate will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use Obfuscate, please deselect all non-nonymized inputs first and then check Obfuscate checkbox again.</source>
@@ -1085,7 +1368,325 @@ Address: %4
     </message>
     <message>
         <source>(of %1 GB needed)</source>
-        <translation>(из требующихся %1 ГБ)</translation>
+        <translation>(of %1 GB needed)</translation>
+    </message>
+</context>
+<context>
+    <name>MasternodeList</name>
+    <message>
+        <source>Form</source>
+        <translation>Форма</translation>
+    </message>
+    <message>
+        <source>My Masternodes</source>
+        <translation>Мои Мастерноды</translation>
+    </message>
+    <message>
+        <source>Note: Status of your masternodes in local wallet can potentially be slightly incorrect.&lt;br /&gt;Always wait for wallet to sync additional data and then double check from another node&lt;br /&gt;if your node should be running but you still see &quot;MISSING&quot; in &quot;Status&quot; field.</source>
+        <translation>Примечание: Статус Вашего masternodes в местном кошельке может потенциально быть немного неправильным.&lt;br /&gt;Дождитесь полной синхронизации кошелька, и двух подтверждения от других узлов&lt;br /&gt; Если Ваш узел должен быть запущен, а вы все еще видите &quot;MISSING&quot; в поле &quot;Status&quot;</translation>
+    </message>
+    <message>
+        <source>Alias</source>
+        <translation>Псевдоним</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Адрес</translation>
+    </message>
+    <message>
+        <source>Protocol</source>
+        <translation>Проткол</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Статус</translation>
+    </message>
+    <message>
+        <source>Active</source>
+        <translation>Время активности в сети</translation>
+    </message>
+    <message>
+        <source>Last Seen (UTC)</source>
+        <translation>В последний раз замеченный (UTC)</translation>
+    </message>
+    <message>
+        <source>Pubkey</source>
+        <translation>Публичный ключ</translation>
+    </message>
+    <message>
+        <source>S&amp;tart alias</source>
+        <translation>Запустить один узел</translation>
+    </message>
+    <message>
+        <source>Start &amp;all</source>
+        <translation>Запустить все &amp;узлы</translation>
+    </message>
+    <message>
+        <source>Start &amp;MISSING</source>
+        <translation>Start &amp;MISSING</translation>
+    </message>
+    <message>
+        <source>&amp;Update status</source>
+        <translation>&amp;Обновить статус</translation>
+    </message>
+    <message>
+        <source>Status will be updated automatically in (sec):</source>
+        <translation>Статус будет обновлен автомитачески через (сек):</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Masternodes</source>
+        <translation>Все мастерноды</translation>
+    </message>
+    <message>
+        <source>Filter List:</source>
+        <translation>Выбрать отдельно</translation>
+    </message>
+    <message>
+        <source>Filter masternode list</source>
+        <translation>Отдельно выбранные мастерноды</translation>
+    </message>
+    <message>
+        <source>Node Count:</source>
+        <translation>Количество узлов</translation>
+    </message>
+    <message>
+        <source>Start alias</source>
+        <translation>Запущенные узлы</translation>
+    </message>
+    <message>
+        <source>Confirm masternode start</source>
+        <translation>Подтвердите запуск мастерноды</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to start masternode %1?</source>
+        <translation>Вы уверены, что хотите запустить мастерноду %1?</translation>
+    </message>
+    <message>
+        <source>Confirm all masternodes start</source>
+        <translation>Подтвердите запуск всех мастернод</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to start ALL masternodes?</source>
+        <translation>Вы уверены, что хотите запустить ВСЕ мастерноды?</translation>
+    </message>
+    <message>
+        <source>Command is not available right now</source>
+        <translation>Команда не доступна прямо сейчас.</translation>
+    </message>
+    <message>
+        <source>You can&apos;t use this command until masternode list is synced</source>
+        <translation>Вы не можете использовать эту команду, пока список мастернод не будет синхронизирован</translation>
+    </message>
+    <message>
+        <source>Confirm missing masternodes start</source>
+        <translation>Подтвердите остановку мастернод</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to start MISSING masternodes?</source>
+        <translation>Вы уверены, что хотите остановить все Мастерноды?</translation>
+    </message>
+</context>
+<context>
+    <name>MultiSendDialog</name>
+    <message>
+        <source>MultiSend</source>
+        <translation>MultiSend</translation>
+    </message>
+    <message>
+        <source>Enter whole numbers 1 - 100</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter % to Give (1-100)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter Address to Send to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GIANT addresses after it matures.
+To Add: enter percentage to give and GIANT address to add to the MultiSend vector.
+To Delete: Enter address to delete and press delete.
+MultiSend will not be activated unless you have clicked Activate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add to MultiSend Vector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deactivate MultiSend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deactivate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose an address from the address book</source>
+        <translation>Выбрать адрес из адресной книги</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
+    </message>
+    <message>
+        <source>Percentage of stake to send</source>
+        <translation>Процент доли для отправки</translation>
+    </message>
+    <message>
+        <source>Percentage:</source>
+        <translation>Процент</translation>
+    </message>
+    <message>
+        <source>Address to send portion of stake to</source>
+        <translation>Адрес для отправки доли</translation>
+    </message>
+    <message>
+        <source>Address:</source>
+        <translation>Адрес</translation>
+    </message>
+    <message>
+        <source>Delete Address From MultiSend Vector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>Удалить</translation>
+    </message>
+    <message>
+        <source>Activate MultiSend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Activate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View MultiSend Vector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View MultiSend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send For Stakes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Send For Masternode Rewards</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The entered address:</source>
+        <translation>Введеный адрес:</translation>
+    </message>
+    <message>
+        <source> is invalid.
+Please check the address and try again.</source>
+        <translation> Не верне.
+Пожалуйста проверьте адрес и попробуйте снова.</translation>
+    </message>
+    <message>
+        <source>The total amount of your MultiSend vector is over 100% of your stake reward
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please Enter 1 - 100 for percent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MultiSend Vector
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Removed </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not locate address
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DarksendConfig</name>
+    <message>
+        <source>Configure Darksend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Basic Privacy</source>
+        <translation type="unfinished">Basic Privacy</translation>
+    </message>
+    <message>
+        <source>High Privacy</source>
+        <translation type="unfinished">High Privacy</translation>
+    </message>
+    <message>
+        <source>Maximum Privacy</source>
+        <translation type="unfinished">Maximum Privacy</translation>
+    </message>
+    <message>
+        <source>Please select a privacy level.</source>
+        <translation type="unfinished">Please select a privacy level.</translation>
+    </message>
+    <message>
+        <source>Use 2 separate masternodes to mix funds up to 10000 GIANT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use 8 separate masternodes to mix funds up to 10000 GIANT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use 16 separate masternodes</source>
+        <translation type="unfinished">Use 16 separate masternodes</translation>
+    </message>
+    <message>
+        <source>This option is the quickest and will cost about ~0.025 GIANT to anonymize 10000 GIANT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This option is moderately fast and will cost about 0.05 GIANT to anonymize 10000 GIANT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
+        <translation type="unfinished">This is the slowest and most secure option. Using maximum anonymity will cost</translation>
+    </message>
+    <message>
+        <source>0.1 GIANT per 10000 GIANT you anonymize.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Darksend Configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening GIANT&apos;s configuration screen.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening GIANT&apos;s configuration screen.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening GIANT&apos;s configuration screen.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1500,7 +2101,10 @@ https://www.transifex.com/giant-crypto/giant-wallet-translations/</translation>
     </message>
     <message numerus="yes">
         <source>%n Rounds</source>
-        <translation><numerusform>%n раунд</numerusform><numerusform>%n  раунда</numerusform><numerusform>%n раундов</numerusform><numerusform>%n раундов</numerusform></translation>
+        <translation><numerusform>%n раунд</numerusform>
+	    <numerusform>%n  раунда</numerusform>
+	    <numerusform>%n раундов</numerusform>
+	</translation>
     </message>
     <message>
         <source>Not enough compatible inputs to anonymize &lt;span style='color:red;'&gt;%1&lt;/span&gt;,&lt;br&gt;will anonymize &lt;span style='color:red;'&gt;%2&lt;/span&gt; instead</source>
