@@ -242,7 +242,7 @@ public:
         nMaxMoneyOut = 100000000 * COIN;
 
         genesis.nTime = 1550731513;
-        genesis.nNonce = 7257789;
+        genesis.nNonce = 8757363;
 
 
   if(genesis.GetHash() != uint256("0x"))
