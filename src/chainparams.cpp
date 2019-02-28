@@ -111,15 +111,15 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // GIANT: 1 day
-        nTargetSpacing = 2 * 60;  // GIANT: 2 minute
+        nTargetSpacing = 1 * 60;  // GIANT: 2 minute
         nLastPOWBlock = 71400;
-        nMaturity = 200;
+        nMaturity = 10;
         nMasternodeCountDrift = 20;
 	nMasternodeColleteralLimxDev = 1000; //Params().MasternodeColleteralLimxDev()
         nModifierUpdateBlock = 1; // we use the version 2 for dmd
         nMaxMoneyOut = 100000000 * COIN;
 
-        const char* pszTimestamp = "This is genesis block for Giant network";
+        const char* pszTimestamp = "This is genesis block for Giant network test";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -133,6 +133,31 @@ public:
         genesis.nTime = 1525748356;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 3880164;
+
+        if(genesis.GetHash() != uint256("0x"))
+        {
+            printf("MSearching for genesis block...\n");
+            uint256 hashTarget;
+            hashTarget.SetCompact(genesis.nBits);
+            while(uint256(genesis.GetHash()) > uint256(hashTarget))
+            {
+                ++genesis.nNonce;
+                if (genesis.nNonce == 0)
+                {
+                    printf("Mainnet NONCE WRAPPED, incrementing time");
+                    std::cout << std::string("Mainnet NONCE WRAPPED, incrementing time:\n");
+                    ++genesis.nTime;
+                }
+                if (genesis.nNonce % 10000 == 0)
+                {
+                printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
+                }
+            }
+            printf("Mainnet block.nTime = %u \n", genesis.nTime);
+            printf("Mainnet block.nNonce = %u \n", genesis.nNonce);
+            printf("Mainnet block.hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+            printf("Mainnet block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+        }
 
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x000007b556429edd30fc5a0736451513896ac7b5df3570f1b903d812b8d1f01f"));
