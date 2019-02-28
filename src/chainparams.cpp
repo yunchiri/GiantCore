@@ -130,7 +130,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1525748356;
+        genesis.nTime = 1550731513;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 6065218;
 
@@ -237,11 +237,11 @@ public:
         nTargetTimespan = 1 * 60; // GIANT: 1 day
         nTargetSpacing = 2 * 60;  // GIANT: 1 minute
         nLastPOWBlock = 262800;
-        nMaturity = 15;
+        nMaturity = 10;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 100000000 * COIN;
 
-        genesis.nTime = 1530822773;
+        genesis.nTime = 1550731513;
         genesis.nNonce = 7257789;
 
 
