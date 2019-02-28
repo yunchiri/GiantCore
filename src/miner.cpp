@@ -491,6 +491,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
                 nLastCoinStakeSearchInterval = 0;
                 MilliSleep(5000);
                 if (!fGenerateBitcoins && !fProofOfStake)
+                    LogPrintf("Point500 \n");
                     continue;
             }
 
