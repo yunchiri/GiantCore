@@ -239,7 +239,7 @@ public:
         nMaxMoneyOut = 100000000 * COIN;
 
         genesis.nTime = 1550731513;
-        genesis.nNonce = 8757363;
+        genesis.nNonce = 9723003;
 
 
   if(genesis.GetHash() != uint256("0x"))
@@ -269,7 +269,7 @@ public:
 
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000fcfe113ef8d295c0298e53008d49313e524a0e3932c11ef5914670fe7d6"));
+        assert(hashGenesisBlock == uint256("0x000006527c9f3be7cbcf1eafb015c37a71bb4d510d6660dfd85dc1c0eb970d8c"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
