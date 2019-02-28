@@ -18,7 +18,7 @@ The project [roadmap](https://giantpay.network/roadmap) and [White Paper](https:
 • Masternode Requirements: 1,000 GIC  
 • Maturity: 201 Confirmations  
 • Prefix: GIC adresses start with the capital letter "G"  
-• Ports: 40444 (p2p) / 41444 (rpc)  
+• Ports: 50444 (p2p) / 41444 (rpc)  
 
 # PoW Reward Distribution
 

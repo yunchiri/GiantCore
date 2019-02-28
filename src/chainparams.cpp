@@ -102,7 +102,7 @@ public:
         pchMessageStart[2] = 0x87;
         pchMessageStart[3] = 0x19;
         vAlertPubKey = ParseHex("04d20b9320f2eb1808b01116dd5ada62edff469b609e894c15d5dc73e64f052887a800ba197a63c897ddc6729737dfc0db3ef7a138a47770ad96981d898141cf23");
-        nDefaultPort = 40444;
+        nDefaultPort = 50444;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // GIANT starting difficulty is 1 / 2^12  //20
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;

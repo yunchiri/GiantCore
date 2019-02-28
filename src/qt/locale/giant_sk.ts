@@ -3757,8 +3757,8 @@ napríklad: alertnotify=echo %%s | mail -s "GIANT Upozornenie" admin@foo.com
         <translation>Uzle na zoznam povolených nemôžu byť DoS zakázané a ich transakcie vždy postúpené ďalej, aj v prípade, ak sú už pamäťovej fronte. Užitočné napr. pre brány</translation>
     </message>
     <message>
-        <source>(40444 could be used only on mainnet)</source>
-        <translation>(40444 nemôže byť použité pre hlavnú sieť)</translation>
+        <source>(50444 could be used only on mainnet)</source>
+        <translation>(50444 nemôže byť použité pre hlavnú sieť)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4175,7 +4175,7 @@ napríklad: alertnotify=echo %%s | mail -s "GIANT Upozornenie" admin@foo.com
         <translation>Neplatný masternodeprivkey. Prosím pozrite do dokumentácie.</translation>
     </message>
     <message>
-        <source>(must be40444 for mainnet)</source>
+        <source>(must be50444 for mainnet)</source>
         <translation>(pre hlavnú sieť musí byť 9999)</translation>
     </message>
     <message>

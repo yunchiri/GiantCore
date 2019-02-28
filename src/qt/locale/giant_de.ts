@@ -3757,8 +3757,8 @@ zum Beispiel: alertnotify=echo %%s | mail -s \"GIANT Alert\" admin@foo.com</tran
         <translation>Erlaubte Gegenstellen können nicht wegen DoS ausgeschlossen werden und ihre Transaktionen werden immer weitergeleitet, sogar wenn sie schon im Memory-Pool sind. Dies ist z.B. für Gateways nützlich.</translation>
     </message>
     <message>
-        <source>(40444 could be used only on mainnet)</source>
-        <translation>(40444 kann nur im Standardnetz benutzt werden)</translation>
+        <source>(50444 could be used only on mainnet)</source>
+        <translation>(50444 kann nur im Standardnetz benutzt werden)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4176,8 +4176,8 @@ GIANT Core wird heruntergefahren.</translation>
         <translation>Masternode-Geheimschlüssel (masternodeprivkey) ist ungültig. Siehe Dokumentation. </translation>
     </message>
     <message>
-        <source>(must be40444 for mainnet)</source>
-        <translation>(muss für Standardnetz40444 sein)</translation>
+        <source>(must be50444 for mainnet)</source>
+        <translation>(muss für Standardnetz50444 sein)</translation>
     </message>
     <message>
         <source>Can't find random Masternode.</source>
