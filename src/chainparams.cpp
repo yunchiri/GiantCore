@@ -116,7 +116,7 @@ public:
         nModifierUpdateBlock = 1; // we use the version 2 for dmd
         nMaxMoneyOut = 100000000 * COIN;
 
-        const char* pszTimestamp = "This is genesis block for Giant network test";
+        const char* pszTimestamp = "This is genesis block for Giant network test2";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -127,7 +127,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1550731513;
+        genesis.nTime = 1550731515;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 8757363;
 
