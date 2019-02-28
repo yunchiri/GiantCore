@@ -112,7 +112,7 @@ public:
         nLastPOWBlock = 100;
         nMaturity = 10;
         nMasternodeCountDrift = 20;
-	nMasternodeColleteralLimxDev = 1000; //Params().MasternodeColleteralLimxDev()
+	    nMasternodeColleteralLimxDev = 1000; //Params().MasternodeColleteralLimxDev()
         nModifierUpdateBlock = 1; // we use the version 2 for dmd
         nMaxMoneyOut = 100000000 * COIN;
 
@@ -232,8 +232,8 @@ public:
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // GIANT: 1 day
-        nTargetSpacing = 2 * 60;  // GIANT: 1 minute
-        nLastPOWBlock = 100;
+        nTargetSpacing = 1 * 60;  // GIANT: 1 minute
+        nLastPOWBlock = 30;
         nMaturity = 10;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 100000000 * COIN;
