@@ -272,7 +272,7 @@ public:
 
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000abbed2e17e30337b1355fa9ad7129fd40e06990955ff363faa9e5f29e51"));
+        assert(hashGenesisBlock == uint256("0x00000fcfe113ef8d295c0298e53008d49313e524a0e3932c11ef5914670fe7d6"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
