@@ -109,7 +109,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // GIANT: 1 day
         nTargetSpacing = 1 * 60;  // GIANT: 2 minute
-        nLastPOWBlock = 150;
+        nLastPOWBlock = 300;
         nMaturity = 10;
         nMasternodeCountDrift = 20;
 	    nMasternodeColleteralLimxDev = 1000; //Params().MasternodeColleteralLimxDev()
