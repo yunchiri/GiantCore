@@ -242,7 +242,7 @@ public:
         genesis.nNonce = 9723003;
 
 
-  if(genesis.GetHash() != uint256("0x"))
+        if(genesis.GetHash() != uint256("0x"))
         {
             printf("MSearching for genesis block...\n");
             uint256 hashTarget;
@@ -286,7 +286,7 @@ public:
         // vSeeds.push_back(CDNSSeedData("95.216.149.238", "95.216.149.238"));
         // vSeeds.push_back(CDNSSeedData("95.216.149.233", "95.216.149.233"));
 		
-	base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 84);
+	    base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 84);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 195);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x81)(0x62)(0xa1).convert_to_container<std::vector<unsigned char> >();
